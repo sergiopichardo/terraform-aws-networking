@@ -1,14 +1,3 @@
-# terraform-aws-networking
-
-Networking Module Created during Terraform Course
-
-## Networking Module
-
-This module manages the creation of VPCs and Subnets, allowing for the creation of both private and public subnets.
-
-Example usage:
-
-```sh
 module "vpc" {
   source = "./modules/networking"
 
@@ -25,9 +14,9 @@ module "vpc" {
 
     subnet_2 = {
       cidr_block = "10.0.1.0/24"
-      public     = true
-      az         = "us-east-1b"
+      // public subnets are indicated by setting the "public" option to true
+      public = true
+      az     = "us-east-1b"
     }
   }
 }
-```
